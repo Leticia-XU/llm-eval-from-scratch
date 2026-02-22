@@ -63,7 +63,20 @@ Average latency: ~8.9s per question
 
 ---
 
-## 6. Next Steps
+## 6. Engineering Challenges
+
+- CUDA OOM during vLLM warmup
+  → Solved by using AWQ quantized model
+
+- FlashInfer required nvcc
+  → Switched attention backend to TRITON_ATTN
+
+- Conda TOS issue
+  → Accepted channel terms manually
+
+---
+
+## 7. Next Steps
 
 - Full 1319 test evaluation
 - Few-shot prompting
